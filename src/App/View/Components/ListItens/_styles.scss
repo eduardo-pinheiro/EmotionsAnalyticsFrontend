@@ -1,0 +1,28 @@
+.list-itens{
+  padding-top: 10px;
+  padding-bottom: 30px;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    a {
+      width: 20.5%;
+      min-width: 200px;
+
+      li {
+        margin-top: 20px;
+        padding: 10px 25px;
+        border-radius: 50px;
+        box-shadow: 0px 0px 5px 0px rgba($color: $purple, $alpha: 0.15);  
+      }
+      li:hover {
+        box-shadow: none;
+        background-color: $purple;
+        color: $white;
+        transition: 0.4s;
+      }
+    }
+  }
+}

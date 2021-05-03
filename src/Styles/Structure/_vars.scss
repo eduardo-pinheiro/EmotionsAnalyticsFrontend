@@ -1,0 +1,23 @@
+// Variaveis do grid
+$container: 1200px;
+$desktop-device: 1200px;
+$tablet-device: 768px; 
+$mobile-device: 480px; 
+
+//Cores do tema
+$purple: #4C006A;
+$white: #ffffff;
+$black: #333333;
+$green: #a0e2a4;
+
+//Font Size do tema
+$fontsize_context: 62.5%; 
+    $fontsize_porcent_tablet: 80;
+    $fontsize_porcent_mobile: 65; 
+    
+    $font_large: 3rem; // tablet = 3.6 | mobile = 2.925
+    $font_medium: 2.5rem; // tablet = 2.4 | mobile = 1.95
+    $font_small: 1.5rem; // tablet = 1.6 | mobile = 1.3 
+
+//Tipografia
+$font-family: 'Nunito', sans-serif;

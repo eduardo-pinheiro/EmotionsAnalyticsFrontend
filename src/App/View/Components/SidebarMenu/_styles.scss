@@ -1,0 +1,149 @@
+aside.sidebar_menu {
+  position: fixed;
+  z-index: 1;
+  
+  ul { 
+    background-color: $purple;
+    
+    li {
+      a { 
+        display: flex;
+        .icon { opacity: 0.75 }
+      }
+    }
+
+    li.is_active {
+      a {
+        .icon { 
+          opacity: 1;
+          transform: scale(1.1);
+        }
+      }      
+    }
+  }
+
+  .menu{
+    width: 30px;
+    background-color: $purple;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+
+    transition: transform 0.3s;  
+  }
+
+  .menu:hover{ transform: scale(1.2) }
+}
+
+aside.sidebar_menu.uncompressed{
+  width: 80px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  ul {
+    border-radius: 0 30px 30px 0;
+    
+    li {
+      padding-bottom: 20px;
+      margin-top: -1px;
+      
+      a {
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 60px;
+  
+        .icon{ width: 25px }
+        
+        h3{
+          color: $white;
+          text-align: center;
+          font-size: 1.3rem;
+          opacity: 0;
+          margin-top: -50%;
+          transition: margin 0.4s, opacity 0.4s;
+        }
+      }
+    }
+  
+    li:hover {
+      a {
+        h3 {
+          opacity: 1;
+          margin-top: inherit;
+        }
+      }
+      
+    }
+  
+    li:first-child{ padding-top: 20px }
+  }
+
+  .menu{
+    padding: 8px 0;
+    margin-top: 10px;
+    border-radius: 0 50px 50px 0;
+
+    .icon{
+      width: 10px;
+      transform: rotate(180deg);
+      margin-left: -7.5px;
+    }
+  }
+
+  transition: left 0.3s, opacity 0.3s;
+}
+
+aside.sidebar_menu.uncompressed.outside {
+  left: -80px;
+  opacity: 0;
+}
+
+aside.sidebar_menu.compressed{
+  left: 15px;
+  top: 15px;
+  width: 40px;
+
+  ul {
+    border-radius: 50px;
+
+    li {
+      padding: 10px 0;
+
+      a {
+        justify-content: center;
+
+        .icon { width: 17px }
+
+        h3 { display: none }
+
+        transition: transform 0.3s;
+      }
+
+      a:hover { transform: scale(1.2) }
+    }
+  }
+
+  .menu{
+    margin: 5px 0 0 5px; 
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+    
+    .icon{ width: 14px }
+  }
+
+  transition: opacity 0.3s;
+}
+
+aside.sidebar_menu.compressed.invisible{
+  opacity: 0;
+}
+
+h1 {
+  color: white;
+  font-size: small;
+  text-align: center;
+  padding-top: 8px;
+}

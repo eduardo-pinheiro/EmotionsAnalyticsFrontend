@@ -1,0 +1,98 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+html, body {
+  overflow-x: hidden;
+
+  background: $white;
+  
+  color: $black;  
+  font-weight: 300;
+  font-family: $font_family;
+  font-size: $fontsize_context;
+  text-rendering: optimizeLegibility;
+  
+  @include device(tablet){
+    font-size: ($fontsize_context * $fontsize_porcent_tablet) / 100;
+  }
+  @include device(mobile){
+    font-size: ($fontsize_context * $fontsize_porcent_mobile) / 100;
+  }
+}
+
+body{  
+  position: relative; 
+}
+
+main{
+  font-size: $font_small;
+}
+
+li{
+  list-style-type: none;
+}
+
+h1{
+  font-weight: 900;
+  font-size: $font_large;
+}
+
+h2{
+  font-weight: 600;
+  font-size: $font_medium;
+}
+
+h3{
+  font-weight: 600;
+  font-size: $font_small;
+}
+
+p{
+  margin-bottom: 0;
+}
+
+a{
+  text-decoration: none;
+  color: $black;
+}
+
+button{
+  border-style: none;
+  background: transparent;
+  font-family: $font_family;
+  font-size: $font_small;
+  cursor: pointer;
+}
+
+input{
+  text-decoration: none;
+  font-family: $font_family;
+  font-size: $font_small;
+  font-weight: 300;
+  color: $black;
+}
+
+button:active{
+  border-style: none;
+  background: transparent;
+}
+
+canvas {
+  padding-top: 40px;
+}
+
+/*Scroll bar*/
+::-webkit-scrollbar {
+  width: 8px;
+  background: $white;
+}
+::-webkit-scrollbar-thumb {
+  background: $purple;
+  border-radius: 30px;
+}
+

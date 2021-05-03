@@ -1,0 +1,30 @@
+// Box-sizing
+*, *::after, *::before { box-sizing: border-box }
+
+// Mixin de clearfix
+@mixin clearfix {
+	&::after, &::before {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin container {
+	max-width: $container;
+	margin: 0px auto;
+	position: relative;
+	padding-left: 55px;
+	padding-right: 55px;
+	
+	@include device(highDesktop){ padding: 0!important }
+
+	@include device(desktop){		
+		width: calc( 100vw - 30px);
+		margin-left: 15px;
+	}
+
+	@include clearfix;
+}
+
+.container { @include container }

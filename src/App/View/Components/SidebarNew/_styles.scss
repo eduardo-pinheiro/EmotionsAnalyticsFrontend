@@ -1,0 +1,71 @@
+aside.sidebar_new {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  top: 15px;
+  right: 15px;
+  width: 150px;
+  z-index: 2;
+
+  .menu_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: $purple;
+    margin-bottom: 15px;
+    transform: rotate(45deg);
+    cursor: pointer;
+
+    transition: transform 0.4s;
+  }
+
+  ul {            
+    width: 100%;
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;  
+      padding: 10px 15px;
+      border-radius: 50px;
+      background-color: $purple;
+      margin-bottom: 5px;
+      cursor: pointer;
+
+      .option_icon {
+        width: 15px;
+      }
+
+      span {
+        color: $white;
+        margin-left: 10px;
+      }
+      
+      transition: transform 0.3s;
+    }
+
+    li:hover {
+      transform: scale(1.05);      
+    }
+
+    transition: transform 0.4s, opacity 0.4s;    
+  }
+}
+
+aside.sidebar_new.close {
+  
+  .menu_icon {
+    transform: unset;
+  }
+
+  ul {
+    transform: translateY(-15px);
+    opacity: 0;
+    pointer-events: none;
+  }
+}

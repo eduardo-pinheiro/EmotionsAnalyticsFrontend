@@ -1,0 +1,61 @@
+form.form {
+  display: flex;
+  flex-direction: column;
+  
+  label {
+    display: flex;
+    flex-direction: column;
+    font-size: $font_small;
+    margin-top: 20px;
+    min-width: 300px;
+    font-weight: normal;
+
+    input, select, option, textarea {
+      background-color: unset;
+      border: none;
+      border-bottom: 0.5px solid;
+      outline: 0;
+      font: 200 $font_small $font-family;
+      transition: transform 0.3s;
+    }
+
+    textarea { 
+      border: 0.5px solid; 
+      margin-top: 5px;
+      padding: 2px 5px;
+    }
+  }
+
+  label:first-child { margin-top: unset }
+
+  .wrapper_buttons {
+    margin-top: 15px;
+    width: 100%;
+
+    .magic_wrapper {
+      position: relative;
+      display: flex;
+      justify-content: space-around;
+      
+      .button {
+        width: calc(50% - 20px);
+        font-weight: 400;
+        border-radius: 50px;
+        border: unset;
+        padding: 5px 0px;
+        outline: 0; 
+        cursor: pointer;
+
+        transition: transform 0.3s;
+      }
+      
+      div.button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .button:hover { transform: scale(1.05) }
+    }
+  }
+}

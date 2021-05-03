@@ -1,0 +1,23 @@
+/*Structure*/
+@import 'Structure/vars';
+@import 'Structure/responsive';
+@import 'Structure/container';
+@import 'Structure/reset';
+@import 'Structure/commons';
+
+/*Components*/
+@import '../App/View/Components/StartTestFixed/styles';
+@import '../App/View/Components/SidebarMenu/styles';
+@import '../App/View/Components/SidebarNew/styles';
+@import '../App/View/Components/Iframe/style';
+@import '../App/View/Components/FinishTestButton/styles';
+@import '../App/View/Components/ListItens/styles';
+@import '../App/View/Components/Form/styles';
+  //form types
+  @import '../App/View/Components/Form/Components/FormTypes/ModalForm/styles';
+
+/*ChildScenes*/
+@import '../App/View/Scenes/Tests/Childs/Test/style';
+
+/*Libraries*/
+@import 'Libraries/toastr.scss';

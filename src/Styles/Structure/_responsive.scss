@@ -1,0 +1,41 @@
+@mixin device($size) {
+	@if $size == highDesktop {
+		@media screen and (min-width: $desktop-device) {
+			@content;
+		}
+	}
+	@else if $size == desktop {
+		@media screen and (max-width: $desktop-device) {
+			@content;
+		}
+	}
+	@else if $size == tablet {
+		@media screen and (max-width: $tablet-device) {
+			@content;
+		}
+	}
+	@else if $size == mobile {
+		@media screen and (max-width: $mobile-device) {
+			@content;
+		}
+	}
+}
+
+@mixin minDevice($size) {
+	@if $size == desktop {
+		@media screen and (min-width: $tablet-device + 1) {
+			@content;
+		}
+	}
+	@else if $size == tablet {
+		@media screen and (min-width: $mobile-device + 1) {
+			@content;
+		}
+	}
+}
+
+@mixin newDevice($size) {
+	@media screen and (max-width: $size) {
+		@content;
+	}
+}

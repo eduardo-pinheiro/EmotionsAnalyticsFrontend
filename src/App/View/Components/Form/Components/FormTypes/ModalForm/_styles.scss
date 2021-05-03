@@ -1,0 +1,93 @@
+.modal_form {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($color: #000000, $alpha: 0.7);
+
+  .wrapper {
+    position: relative;
+    background: $purple;
+    padding: 30px 35px;
+    border-radius: 7px;
+    box-shadow: 0px 0px 5px rgba($color: #000000, $alpha: 0.5);
+    
+    form.form {
+      label {
+        color: $white;
+
+        option {
+          background-color: $purple!important;           
+        }
+
+        input, select, textarea {
+          border-color: $white;
+          color: $white;
+        }
+
+        textarea { border-color: rgba($color: $white, $alpha: 0.5) }
+
+        ::placeholder { color: rgba($color: $white, $alpha: 0.5) }
+
+        transition: filter 0.7s;  
+      }
+
+      .wrapper_buttons {
+        margin-top: 30px;
+        .button {
+          background: $white;
+          color: $purple;
+          box-shadow: 0px 0px 20px rgba($color: #000000, $alpha: 0.5);
+        }
+        transition: filter 0.7s;
+      }
+    }
+
+    img.loading {
+      position: absolute;
+      right: 50%;
+      top: 50%;
+      transform: translate(50%, -50%);
+      width: 25%;
+      filter: brightness(0) invert(1);
+      opacity: 0;
+
+      transition: opacity 0.7s;
+    }
+
+    transition: opacity 0.3, transform 0.3;
+  }
+
+  transition-property: opacity;
+  transition-delay: 0.1s;
+  transition-duration: 0.4s;
+}
+
+.modal_form.close {
+  pointer-events: none;
+  opacity: 0;
+
+  .wrapper {
+    transform: translateY(30%);
+    opacity: 0;
+  }
+}
+
+.modal_form.loading {
+  .wrapper {
+
+    form.form {
+      pointer-events: none;
+      label { filter: blur(1px) }
+      .wrapper_buttons { filter: blur(1px) }
+    }
+
+    img.loading {
+      opacity: 1;
+    }
+  }
+}
